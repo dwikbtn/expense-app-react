@@ -9,7 +9,8 @@ const NewExpense = (props) => {
       id: Math.random().toString(),
     };
     props.onAddExpense(expenseData);
-    setButton(true);
+    console.log(expenseData.title);
+    expenseData.title === "" ? setButton(true) : setButton(false);
   };
 
   const addExpenseFormHandler = () => {
